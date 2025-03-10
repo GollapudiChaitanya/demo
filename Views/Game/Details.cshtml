@@ -1,0 +1,37 @@
+﻿@model Demo_Project_Game_Events.Models.Game
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/GameLayout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Game Details</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.GameId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.GameId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.GameName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GameName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.GameType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GameType)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.GameId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
